@@ -9,7 +9,7 @@
 ## Table of Contents
 
 * [Installation](#installation)
-* [Examples](#examples)
+* [Example](#example)
 * [Troubleshooting](#troubleshooting)
 
 <a name="installation"></a>
@@ -36,7 +36,18 @@ or add our package to your `composer.json` file.
   }
 }
 ```
-## Examples
+## Example
+
+### Check connection
+```php
+<?php
+use Statscore\Client;
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+$client = new Client('localhost', 5672, 'guest', 'guest', 'test');
+$client->run();
+```
 
 
 ## Troubleshooting
@@ -45,4 +56,4 @@ Our support team, based in Katowice, exists for one purpose: to serve and deligh
 
 Have a question? Our team will help you find answers 24 hours a day, 365 days a year. Please send us an email at [tech-support@statscore.com](mailto:tech-support@statscore.com)
 
-Issues are tracked on [GitHub](https://github.com/statscore/apiclient/issues)
+Issues are tracked on [GitHub](https://github.com/statscore/rabbit-client-php/issues)
