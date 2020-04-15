@@ -2,9 +2,7 @@
 
 [![Build Status](https://travis-ci.org/statscore/rabbit-client-php.svg?branch=master)](https://travis-ci.org/statscore/rabbit-client-php)
 [![Packagist](https://img.shields.io/packagist/v/statscore/rabbit-client-php.svg)](https://packagist.org/packages/statscore/rabbit-client-php)
-[![codecov](https://codecov.io/gh/statscore/rabbit-client-php/branch/master/graph/badge.svg)](https://codecov.io/gh/statscore/rabbit-client-php)
 [![PHP from Travis config](https://img.shields.io/travis/php-v/statscore/rabbit-client-php/master.svg)](https://travis-ci.org/statscore/rabbit-client-php)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=statscore_rabbit-client-php&metric=alert_status)](https://sonarcloud.io/dashboard?id=statscore_rabbit-client-php)
 [![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/statscore/rabbit-client-php)](https://libraries.io/github/statscore/rabbit-client-php)
 
 
@@ -19,11 +17,7 @@
 
 ### Prerequisites
 
-- PHP version >=7.3
-
-### Documentation
-
-- [API Documentation](https://docs.api.statscore.com/?version=latest)
+- PHP version >=7.4
 
 ### Hot to install package
 
