@@ -16,7 +16,6 @@
     }
   ],
   "require": {
-    "php": ">=7.4",
     "ext-json": "*",
     "php-amqplib/php-amqplib": "^2.11",
     "symfony/http-foundation": "^5.0",
