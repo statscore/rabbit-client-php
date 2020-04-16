@@ -9,9 +9,9 @@ namespace Statscore\Model;
 final class Incident
 {
     /**
-     * @var int
+     * @var string
      */
-    private int $id;
+    private string $id;
 
     /**
      * @var string
@@ -119,18 +119,18 @@ final class Incident
     private ?string $yPos;
 
     /**
-     * @return int
+     * @return string
      */
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param int $id
+     * @param string $id
      * @return Incident
      */
-    public function setId(int $id): Incident
+    public function setId(string $id): Incident
     {
         $this->id = $id;
 

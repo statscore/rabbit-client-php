@@ -25,6 +25,10 @@
     "symfony/serializer": "^5.0",
     "symfony/var-dumper": "^5.0"
   },
+  "require-dev": {
+    "mockery/mockery": "^1.3",
+    "phpunit/phpunit": "^9.1"
+  },
   "config": {
     "sort-packages": true
   },
@@ -33,7 +37,8 @@
       "Statscore": "lib/"
     },
     "psr-4": {
-      "Statscore\\": "lib/Statscore/"
+      "Statscore\\": "lib/Statscore/",
+      "UnitTests\\": "tests/unit"
     }
   },
   "support": {
