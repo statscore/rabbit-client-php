@@ -83,6 +83,5 @@ final class Client
             null,
             [ObjectNormalizer::DISABLE_TYPE_ENFORCEMENT => true]
         );
-        dump($messageModel);
     }
 }

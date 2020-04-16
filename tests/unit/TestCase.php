@@ -2,26 +2,26 @@
 
 namespace UnitTests;
 
+use Mockery;
+use PhpAmqpLib\Channel\AMQPChannel;
+use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PHPUnit\Framework\TestCase as BaseTest;
-use Statscore\Client;
-use Symfony\Component\Serializer\Serializer;
+use Statscore\Service\RabbitMQ\AMQPService;
 
 abstract class TestCase extends BaseTest
 {
-    /**
-     * @var Client
-     */
-    protected $client;
-
-    /**
-     * @var Serializer
-     */
-    protected $serializer;
-
     public function setUp(): void
     {
         parent::setUp();
+        $channel = Mockery::mock(AMQPChannel::class);
+        $channel->shouldReceive('basic_consume')->andReturn('test');
+        $channel->shouldReceive('close')->andReturn();
 
-        $this->serializer = \Statscore\Service\Serializer\Serializer::get();
+        $stream = Mockery::mock(AMQPStreamConnection::class);
+        $stream->shouldReceive('channel')->andReturn($channel);
+        $stream->shouldReceive('close')->andReturn();
+
+        $mock = Mockery::mock('overload:' . AMQPService::class);
+        $mock->shouldReceive('getConnection')->andReturn($stream);
     }
 }
